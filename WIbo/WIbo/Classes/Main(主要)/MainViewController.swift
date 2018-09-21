@@ -17,7 +17,7 @@ class MainViewController: UITabBarController {
         addChild(childVc: MessageViewController(), title: "消息", imageName: "tabbar_message_center")
         addChild(childVc: DiscoverViewController(), title: "发现", imageName: "tabbar_profile")
         addChild(childVc: ProfileViewController(), title: "我", imageName: "tabbar_discover")
-        
+        //
         
 //        //创建子控制器
 //        let childVc = HomeViewController()
