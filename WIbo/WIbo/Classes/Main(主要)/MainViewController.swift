@@ -9,42 +9,63 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    //MARK:- 懒加载属性
+    private lazy var composeBtn : UIButton = UIButton()
+    
+    //    private lazy var imageNames = ["tabbar_home","tabbar_message_center","","tabbar_discover","tabbar_profile"]
+    
+    // MARK:- 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChild(childVc: HomeViewController(), title: "首页", imageName: "tabbar_home")
-        addChild(childVc: MessageViewController(), title: "消息", imageName: "tabbar_message_center")
-        addChild(childVc: DiscoverViewController(), title: "发现", imageName: "tabbar_profile")
-        addChild(childVc: ProfileViewController(), title: "我", imageName: "tabbar_discover")
-        //
-        
-//        //创建子控制器
-//        let childVc = HomeViewController()
-//        childVc.title = "首页"
-//        childVc.tabBarItem.image = UIImage(named: "tabbar_home")
-//        childVc.tabBarItem.selectedImage = UIImage(named: "tabbar_home_highlighted")
-//        //包装导航控制器
-//        let childNav = UINavigationController(rootViewController: childVc)
-//        addChild(childNav)
+        setupComposeBtn()
         
     }
-    // swift支持方法的重载
-    // 方法的重载:方法名称相同,但是参数不同. --> 1.参数的类型不同 2.参数的个数不同
-    // private在当前文件中可以访问,但是其他文件不能访问
-    private func addChild(childVc: UIViewController, title :String, imageName:String) {
-
-        // 设置子控制器的属性
-        childVc.title = title
-        childVc.tabBarItem.image = UIImage(named: imageName)
-        childVc.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
-        
-        //包装导航控制器
-        let childNav = UINavigationController(rootViewController: childVc)
-        
-        addChild(childNav)
-    }
-
-
-
+    
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated)
+    //        setupTabbarItems()
+    //    }
 }
+
+
+// MARK:- 设置UI界面
+extension MainViewController{
+    /// 设置发布按钮
+    private func setupComposeBtn(){
+        // 1.将composeBtn添加到tabbar中
+        tabBar.addSubview(composeBtn)
+        // 2.设置属性
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
+        composeBtn.sizeToFit()
+        // 3.设置位置
+        composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height*0.5)
+        
+    }
+    
+    
+    /*
+     /// 调整tabbar中的item
+     private func setupTabbarItems() {
+     // 1.遍历所有的item
+     for i in 0..<tabBar.items!.count {
+     // 2.获取item
+     let item = tabBar.items![i]
+     
+     // 3.如果是下标值为2,则该item不可以和用户交互
+     if i == 2 {
+     item.isEnabled = false
+     continue
+     }
+     // 4.设置其他item的选中时候的图片
+     item.selectedImage = UIImage(named: imageNames[i] + "_highlighted")
+     }
+     }
+     */
+    
+    
+}
+
