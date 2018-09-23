@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		163E23A92157D255005CFB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23A82157D255005CFB82 /* TitleButton.swift */; };
 		163E23AD2157E391005CFB82 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AB2157E391005CFB82 /* PopoverViewController.swift */; };
 		163E23AE2157E391005CFB82 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E23AC2157E391005CFB82 /* PopoverViewController.xib */; };
+		163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AF2157E80C005CFB82 /* TitleButton.swift */; };
 		165754B221549918006D9BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754B121549918006D9BE5 /* AppDelegate.swift */; };
 		165754B721549918006D9BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165754B521549918006D9BE5 /* Main.storyboard */; };
 		165754B92154991A006D9BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165754B82154991A006D9BE5 /* Assets.xcassets */; };
@@ -33,9 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		163E23A82157D255005CFB82 /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		163E23AB2157E391005CFB82 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		163E23AC2157E391005CFB82 /* PopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		163E23AF2157E80C005CFB82 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		165754AE21549918006D9BE5 /* WIbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165754B121549918006D9BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165754B621549918006D9BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 				165754C721549B21006D9BE5 /* Discover(发现) */,
 				165754C621549B21006D9BE5 /* Profile(我) */,
 				168FAAA6215619F600E364B6 /* Tools(工具) */,
-				163E23A82157D255005CFB82 /* TitleButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -174,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				168FAAA7215619F600E364B6 /* Category */,
+				163E23AF2157E80C005CFB82 /* TitleButton.swift */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -290,12 +290,12 @@
 				168FAACB2156261F00E364B6 /* UIButton-Extension.swift in Sources */,
 				165754CC21549C2B006D9BE5 /* MessageViewController.swift in Sources */,
 				163E23AD2157E391005CFB82 /* PopoverViewController.swift in Sources */,
-				163E23A92157D255005CFB82 /* TitleButton.swift in Sources */,
 				165754CE21549C4A006D9BE5 /* ProfileViewController.swift in Sources */,
 				165754D221549D0C006D9BE5 /* MainViewController.swift in Sources */,
 				168FAACE2157423100E364B6 /* BaseViewController.swift in Sources */,
 				168FAAD02157772800E364B6 /* VisitorView.swift in Sources */,
 				165754CA21549C03006D9BE5 /* HomeViewController.swift in Sources */,
+				163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */,
 				165754D021549C5B006D9BE5 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
