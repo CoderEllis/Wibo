@@ -26,13 +26,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLE-PQ-Yd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="-1118"/>
+            <point key="canvasLocation" x="337" y="-1209"/>
         </scene>
         <!--首页-->
         <scene sceneID="Kie-U4-mat">
             <objects>
                 <navigationController id="50x-Cr-KJg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="oF9-2y-CCc"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" selectedImage="tabbar_home_highlighted" id="oF9-2y-CCc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2CX-fi-FL8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -49,5 +49,6 @@
     </scenes>
     <resources>
         <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_home_highlighted" width="30" height="30"/>
     </resources>
 </document>

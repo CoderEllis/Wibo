@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163E23A92157D255005CFB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23A82157D255005CFB82 /* TitleButton.swift */; };
+		163E23AD2157E391005CFB82 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AB2157E391005CFB82 /* PopoverViewController.swift */; };
+		163E23AE2157E391005CFB82 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E23AC2157E391005CFB82 /* PopoverViewController.xib */; };
 		165754B221549918006D9BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754B121549918006D9BE5 /* AppDelegate.swift */; };
 		165754B721549918006D9BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165754B521549918006D9BE5 /* Main.storyboard */; };
 		165754B92154991A006D9BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165754B82154991A006D9BE5 /* Assets.xcassets */; };
@@ -23,9 +26,16 @@
 		168FAAC72156241300E364B6 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168FAAC62156241300E364B6 /* Message.storyboard */; };
 		168FAAC92156241F00E364B6 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168FAAC82156241F00E364B6 /* Discover.storyboard */; };
 		168FAACB2156261F00E364B6 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAACA2156261F00E364B6 /* UIButton-Extension.swift */; };
+		168FAACE2157423100E364B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAACD2157423100E364B6 /* BaseViewController.swift */; };
+		168FAAD02157772800E364B6 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAACF2157772800E364B6 /* VisitorView.swift */; };
+		168FAAD22157773200E364B6 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168FAAD12157773200E364B6 /* VisitorView.xib */; };
+		168FAAD62157C2B900E364B6 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		163E23A82157D255005CFB82 /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		163E23AB2157E391005CFB82 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		163E23AC2157E391005CFB82 /* PopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		165754AE21549918006D9BE5 /* WIbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165754B121549918006D9BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165754B621549918006D9BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +54,10 @@
 		168FAAC62156241300E364B6 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		168FAAC82156241F00E364B6 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		168FAACA2156261F00E364B6 /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		168FAACD2157423100E364B6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		168FAACF2157772800E364B6 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		168FAAD12157773200E364B6 /* VisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163E23AA2157E12C005CFB82 /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				163E23AB2157E391005CFB82 /* PopoverViewController.swift */,
+				163E23AC2157E391005CFB82 /* PopoverViewController.xib */,
+			);
+			path = UIPopover;
+			sourceTree = "<group>";
+		};
 		165754A521549918006D9BE5 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +112,13 @@
 		165754C321549B21006D9BE5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				165754C821549B21006D9BE5 /* Main(主要) */,
 				165754C421549B21006D9BE5 /* Home(首页) */,
 				165754C521549B21006D9BE5 /* Message(消息) */,
 				165754C721549B21006D9BE5 /* Discover(发现) */,
 				165754C621549B21006D9BE5 /* Profile(我) */,
-				165754C821549B21006D9BE5 /* Main(主要) */,
 				168FAAA6215619F600E364B6 /* Tools(工具) */,
+				163E23A82157D255005CFB82 /* TitleButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -102,6 +126,7 @@
 		165754C421549B21006D9BE5 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				163E23AA2157E12C005CFB82 /* UIPopover */,
 				165754C921549C03006D9BE5 /* HomeViewController.swift */,
 				168FAAA821561B7300E364B6 /* Home.storyboard */,
 			);
@@ -139,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				168FAAC2215621A600E364B6 /* Resource */,
+				168FAACC215741A200E364B6 /* Visitor */,
 				165754D121549D0C006D9BE5 /* MainViewController.swift */,
 			);
 			path = "Main(主要)";
@@ -156,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				168FAACA2156261F00E364B6 /* UIButton-Extension.swift */,
+				168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -167,6 +194,16 @@
 				168FAABF2156214C00E364B6 /* MainVCSettings.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		168FAACC215741A200E364B6 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				168FAACD2157423100E364B6 /* BaseViewController.swift */,
+				168FAACF2157772800E364B6 /* VisitorView.swift */,
+				168FAAD12157773200E364B6 /* VisitorView.xib */,
+			);
+			path = Visitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				165754BC2154991A006D9BE5 /* LaunchScreen.storyboard in Resources */,
+				168FAAD22157773200E364B6 /* VisitorView.xib in Resources */,
 				165754B92154991A006D9BE5 /* Assets.xcassets in Resources */,
 				168FAAC02156214C00E364B6 /* MainVCSettings.json in Resources */,
 				168FAAB321561BEB00E364B6 /* Profile.storyboard in Resources */,
 				168FAAC5215621F700E364B6 /* Null.storyboard in Resources */,
+				163E23AE2157E391005CFB82 /* PopoverViewController.xib in Resources */,
 				165754B721549918006D9BE5 /* Main.storyboard in Resources */,
 				168FAAC72156241300E364B6 /* Message.storyboard in Resources */,
 				168FAAA921561B7300E364B6 /* Home.storyboard in Resources */,
@@ -246,11 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168FAAD62157C2B900E364B6 /* UIBarButtonItem-Extension.swift in Sources */,
 				165754B221549918006D9BE5 /* AppDelegate.swift in Sources */,
 				168FAACB2156261F00E364B6 /* UIButton-Extension.swift in Sources */,
 				165754CC21549C2B006D9BE5 /* MessageViewController.swift in Sources */,
+				163E23AD2157E391005CFB82 /* PopoverViewController.swift in Sources */,
+				163E23A92157D255005CFB82 /* TitleButton.swift in Sources */,
 				165754CE21549C4A006D9BE5 /* ProfileViewController.swift in Sources */,
 				165754D221549D0C006D9BE5 /* MainViewController.swift in Sources */,
+				168FAACE2157423100E364B6 /* BaseViewController.swift in Sources */,
+				168FAAD02157772800E364B6 /* VisitorView.swift in Sources */,
 				165754CA21549C03006D9BE5 /* HomeViewController.swift in Sources */,
 				165754D021549C5B006D9BE5 /* DiscoverViewController.swift in Sources */,
 			);
