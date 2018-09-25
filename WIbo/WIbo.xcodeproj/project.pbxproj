@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160CA48B215A319A00352266 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160CA48A215A319A00352266 /* PopoverAnimator.swift */; };
 		163E23AD2157E391005CFB82 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AB2157E391005CFB82 /* PopoverViewController.swift */; };
 		163E23AE2157E391005CFB82 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E23AC2157E391005CFB82 /* PopoverViewController.xib */; };
 		163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AF2157E80C005CFB82 /* TitleButton.swift */; };
+		164E7B2F2157F77700200236 /* ELPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E7B2E2157F77700200236 /* ELPresentationController.swift */; };
 		165754B221549918006D9BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754B121549918006D9BE5 /* AppDelegate.swift */; };
 		165754B721549918006D9BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165754B521549918006D9BE5 /* Main.storyboard */; };
 		165754B92154991A006D9BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165754B82154991A006D9BE5 /* Assets.xcassets */; };
@@ -30,12 +32,15 @@
 		168FAAD02157772800E364B6 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAACF2157772800E364B6 /* VisitorView.swift */; };
 		168FAAD22157773200E364B6 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168FAAD12157773200E364B6 /* VisitorView.xib */; };
 		168FAAD62157C2B900E364B6 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */; };
+		4414110BD8730B46496A34A3 /* Pods_WIbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F599ED2BAC40D2C6E1AE4179 /* Pods_WIbo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160CA48A215A319A00352266 /* PopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		163E23AB2157E391005CFB82 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		163E23AC2157E391005CFB82 /* PopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		163E23AF2157E80C005CFB82 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		164E7B2E2157F77700200236 /* ELPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELPresentationController.swift; sourceTree = "<group>"; };
 		165754AE21549918006D9BE5 /* WIbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165754B121549918006D9BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165754B621549918006D9BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +63,9 @@
 		168FAACF2157772800E364B6 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		168FAAD12157773200E364B6 /* VisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		75229A7101E558E64D74A995 /* Pods-WIbo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIbo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WIbo/Pods-WIbo.release.xcconfig"; sourceTree = "<group>"; };
+		A2A1F6EDEC7547EB91026000 /* Pods-WIbo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIbo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WIbo/Pods-WIbo.debug.xcconfig"; sourceTree = "<group>"; };
+		F599ED2BAC40D2C6E1AE4179 /* Pods_WIbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WIbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4414110BD8730B46496A34A3 /* Pods_WIbo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +85,8 @@
 			children = (
 				163E23AB2157E391005CFB82 /* PopoverViewController.swift */,
 				163E23AC2157E391005CFB82 /* PopoverViewController.xib */,
+				164E7B2E2157F77700200236 /* ELPresentationController.swift */,
+				160CA48A215A319A00352266 /* PopoverAnimator.swift */,
 			);
 			path = UIPopover;
 			sourceTree = "<group>";
@@ -85,6 +96,8 @@
 			children = (
 				165754B021549918006D9BE5 /* WIbo */,
 				165754AF21549918006D9BE5 /* Products */,
+				1955F32D6B1D15E3170BF71A /* Pods */,
+				60FC823CB52233B2216385DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +219,23 @@
 			path = Visitor;
 			sourceTree = "<group>";
 		};
+		1955F32D6B1D15E3170BF71A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2A1F6EDEC7547EB91026000 /* Pods-WIbo.debug.xcconfig */,
+				75229A7101E558E64D74A995 /* Pods-WIbo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		60FC823CB52233B2216385DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F599ED2BAC40D2C6E1AE4179 /* Pods_WIbo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 165754C02154991A006D9BE5 /* Build configuration list for PBXNativeTarget "WIbo" */;
 			buildPhases = (
+				3E50F998898CACE97169DACB /* [CP] Check Pods Manifest.lock */,
 				165754AA21549918006D9BE5 /* Sources */,
 				165754AB21549918006D9BE5 /* Frameworks */,
 				165754AC21549918006D9BE5 /* Resources */,
+				FEC010956F81724F6E5EA441 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +312,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E50F998898CACE97169DACB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WIbo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEC010956F81724F6E5EA441 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WIbo/Pods-WIbo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WIbo/Pods-WIbo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		165754AA21549918006D9BE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -293,9 +370,11 @@
 				165754CE21549C4A006D9BE5 /* ProfileViewController.swift in Sources */,
 				165754D221549D0C006D9BE5 /* MainViewController.swift in Sources */,
 				168FAACE2157423100E364B6 /* BaseViewController.swift in Sources */,
+				160CA48B215A319A00352266 /* PopoverAnimator.swift in Sources */,
 				168FAAD02157772800E364B6 /* VisitorView.swift in Sources */,
 				165754CA21549C03006D9BE5 /* HomeViewController.swift in Sources */,
 				163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */,
+				164E7B2F2157F77700200236 /* ELPresentationController.swift in Sources */,
 				165754D021549C5B006D9BE5 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +527,7 @@
 		};
 		165754C12154991A006D9BE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A1F6EDEC7547EB91026000 /* Pods-WIbo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -468,6 +548,7 @@
 		};
 		165754C22154991A006D9BE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75229A7101E558E64D74A995 /* Pods-WIbo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
