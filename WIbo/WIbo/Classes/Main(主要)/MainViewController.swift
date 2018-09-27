@@ -19,7 +19,6 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupComposeBtn()
         
     }
     

@@ -14,7 +14,7 @@ class BaseViewController: UITableViewController {
     lazy var visitorView : VisitorView = VisitorView.visitorView()
 
     // MARK:- 定义变量
-    var isLogin : Bool = true
+    var isLogin : Bool = false
     
     // MARK:- 系统回调函数
     override func loadView(){//如果ture 有登录 会调用 super.loadview  false 调用后面的 setupview
@@ -51,6 +51,12 @@ extension BaseViewController{
     }
     
     @objc private func loginBtnClick(){
-        print("loginBtnClick")
+        // 1.创建授权控制器
+        let oauthVc = OAuthViewController()
+        // 2.包装导航栏控制器
+        let oauthNav = UINavigationController(rootViewController: oauthVc)
+        // 3.弹出控制器
+        present(oauthNav,animated: true,completion: nil)
     }
 }
+
