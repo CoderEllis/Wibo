@@ -18,7 +18,7 @@ class HomeViewController: BaseViewController {
     // 注意:在闭包中如果使用当前对象的属性或者调用方法,也需要加self
     // 两个地方需要使用self : 1> 如果在一个函数中出现歧义 2> 在闭包中使用当前对象的属性和方法也需要加self
     private lazy var popoverAnimator : PopoverAnimator = PopoverAnimator {[weak self] (presented) in
-        self?.titleBtn.isSelected = presented  //一般在等号右边需要强制解包 因为有可能返回 nil 
+        self?.titleBtn.isSelected = presented  //一般在等号右边需要强制解包 因为有可能返回 nil
     }
 
     // MARK:- 系统回调函数

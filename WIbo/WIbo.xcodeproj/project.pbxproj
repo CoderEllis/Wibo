@@ -12,6 +12,8 @@
 		163E23AE2157E391005CFB82 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E23AC2157E391005CFB82 /* PopoverViewController.xib */; };
 		163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AF2157E80C005CFB82 /* TitleButton.swift */; };
 		164E7B2F2157F77700200236 /* ELPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E7B2E2157F77700200236 /* ELPresentationController.swift */; };
+		165501B7215E6C440059F434 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165501B5215E6C440059F434 /* WelcomeViewController.swift */; };
+		165501B8215E6C440059F434 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165501B6215E6C440059F434 /* WelcomeViewController.xib */; };
 		165754B221549918006D9BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754B121549918006D9BE5 /* AppDelegate.swift */; };
 		165754B721549918006D9BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165754B521549918006D9BE5 /* Main.storyboard */; };
 		165754B92154991A006D9BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165754B82154991A006D9BE5 /* Assets.xcassets */; };
@@ -33,6 +35,7 @@
 		168FAAD02157772800E364B6 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAACF2157772800E364B6 /* VisitorView.swift */; };
 		168FAAD22157773200E364B6 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168FAAD12157773200E364B6 /* VisitorView.xib */; };
 		168FAAD62157C2B900E364B6 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */; };
+		16A967F8215E6CB600360C05 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A967F7215E6CB600360C05 /* UserAccountViewModel.swift */; };
 		16EC7E78215B8614003DFA0C /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC7E76215B8614003DFA0C /* OAuthViewController.swift */; };
 		16EC7E79215B8614003DFA0C /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16EC7E77215B8614003DFA0C /* OAuthViewController.xib */; };
 		16EC7E7B215B9847003DFA0C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC7E7A215B9847003DFA0C /* Common.swift */; };
@@ -46,6 +49,8 @@
 		163E23AC2157E391005CFB82 /* PopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		163E23AF2157E80C005CFB82 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		164E7B2E2157F77700200236 /* ELPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELPresentationController.swift; sourceTree = "<group>"; };
+		165501B5215E6C440059F434 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		165501B6215E6C440059F434 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		165754AE21549918006D9BE5 /* WIbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165754B121549918006D9BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165754B621549918006D9BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		168FAACF2157772800E364B6 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		168FAAD12157773200E364B6 /* VisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		168FAAD52157C2B900E364B6 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		16A967F7215E6CB600360C05 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		16EC7E76215B8614003DFA0C /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		16EC7E77215B8614003DFA0C /* OAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		16EC7E7A215B9847003DFA0C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -99,6 +105,15 @@
 				160CA48A215A319A00352266 /* PopoverAnimator.swift */,
 			);
 			path = UIPopover;
+			sourceTree = "<group>";
+		};
+		165501B4215E6C440059F434 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				165501B6215E6C440059F434 /* WelcomeViewController.xib */,
+				165501B5215E6C440059F434 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		165754A521549918006D9BE5 = {
@@ -185,6 +200,7 @@
 		165754C821549B21006D9BE5 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				165501B4215E6C440059F434 /* Welcome */,
 				168FAAC2215621A600E364B6 /* Resource */,
 				168FAACC215741A200E364B6 /* Visitor */,
 				16EC7E75215B8383003DFA0C /* OAuth */,
@@ -238,6 +254,7 @@
 				16EC7E77215B8614003DFA0C /* OAuthViewController.xib */,
 				16EC7E76215B8614003DFA0C /* OAuthViewController.swift */,
 				16626DB5215C5CC000D62E12 /* UserAccount.swift */,
+				16A967F7215E6CB600360C05 /* UserAccountViewModel.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -322,6 +339,7 @@
 				165754BC2154991A006D9BE5 /* LaunchScreen.storyboard in Resources */,
 				168FAAD22157773200E364B6 /* VisitorView.xib in Resources */,
 				165754B92154991A006D9BE5 /* Assets.xcassets in Resources */,
+				165501B8215E6C440059F434 /* WelcomeViewController.xib in Resources */,
 				168FAAC02156214C00E364B6 /* MainVCSettings.json in Resources */,
 				16EC7E79215B8614003DFA0C /* OAuthViewController.xib in Resources */,
 				168FAAB321561BEB00E364B6 /* Profile.storyboard in Resources */,
@@ -391,6 +409,7 @@
 				16626DB6215C5CC000D62E12 /* UserAccount.swift in Sources */,
 				168FAAD62157C2B900E364B6 /* UIBarButtonItem-Extension.swift in Sources */,
 				165754B221549918006D9BE5 /* AppDelegate.swift in Sources */,
+				16A967F8215E6CB600360C05 /* UserAccountViewModel.swift in Sources */,
 				168FAACB2156261F00E364B6 /* UIButton-Extension.swift in Sources */,
 				165754CC21549C2B006D9BE5 /* MessageViewController.swift in Sources */,
 				16EC7E78215B8614003DFA0C /* OAuthViewController.swift in Sources */,
@@ -404,6 +423,7 @@
 				163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */,
 				164E7B2F2157F77700200236 /* ELPresentationController.swift in Sources */,
 				165754D021549C5B006D9BE5 /* DiscoverViewController.swift in Sources */,
+				165501B7215E6C440059F434 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

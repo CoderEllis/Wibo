@@ -14,10 +14,12 @@ class BaseViewController: UITableViewController {
     lazy var visitorView : VisitorView = VisitorView.visitorView()
 
     // MARK:- 定义变量
-    var isLogin : Bool = false
+    var isLogin : Bool = UserAccountViewModel.shareIntance.isLogin
     
     // MARK:- 系统回调函数
-    override func loadView(){//如果ture 有登录 会调用 super.loadview  false 调用后面的 setupview
+    override func loadView(){    //如果ture 有登录 会调用 super.loadview  false 调用后面的 setupview
+        
+        // 判断要加载哪一个View
         isLogin ? super.loadView() : setupVisitorView()
     }
     

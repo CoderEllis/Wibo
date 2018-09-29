@@ -9,10 +9,9 @@
 import UIKit
 import SVProgressHUD
 
-class OAuthViewController: UIViewController {
+class  OAuthViewController: UIViewController {
     // MARK:- 控件的属性
     @IBOutlet weak var webView: UIWebView!
-    
 
     // MARK:- 系统回调函数
     override func viewDidLoad() {
@@ -155,10 +154,22 @@ extension OAuthViewController{
             account.screen_name = userInfoDict["screen_name"] as? String
             account.avatar_large = userInfoDict["avatar_large"] as? String
             
-            print(account)
-        }
-        
-        
+            // 4.将account对象保存
+//            // 4.1.获取沙盒路径
+//            var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+//            accountPath = (accountPath as NSString).appendingPathComponent("accout.plist")
+            
+            // 4.保存对象到沙盒
+            NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountViewModel.shareIntance.accountPath)
+            
+            // 5.将account对象设置到单例对象中  
+            UserAccountViewModel.shareIntance.account = account
+            
+            // 6.退出当前控制器
+            self.dismiss(animated: false, completion: {
+                UIApplication.shared.keyWindow?.rootViewController = WelcomeViewController()
+            })
+        } 
     }
 }
 
