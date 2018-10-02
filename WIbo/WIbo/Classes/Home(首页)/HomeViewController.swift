@@ -20,6 +20,9 @@ class HomeViewController: BaseViewController {
     private lazy var popoverAnimator : PopoverAnimator = PopoverAnimator {[weak self] (presented) in
         self?.titleBtn.isSelected = presented  //一般在等号右边需要强制解包 因为有可能返回 nil
     }
+    
+    //懒加载数组
+    private lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
 
     // MARK:- 系统回调函数
     override func viewDidLoad() {
@@ -33,6 +36,12 @@ class HomeViewController: BaseViewController {
         
         // 2.设置导航栏的内容
         setupNavigationBar()
+        
+        //3.请求数据
+        loadStatuses()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200
     }
 
 }
@@ -71,13 +80,57 @@ extension HomeViewController{
         
         // 3.设置控制器的modal样式
         popoverVc.modalPresentationStyle = .custom
-        
+
         // 4.设置转场的代理
         popoverVc.transitioningDelegate = popoverAnimator
-        popoverAnimator.presentedFrame = CGRect(x: 100, y: 100, width: 180, height: 250)
-        
+        let x = Int(UIScreen.main.bounds.size.width * 0.5 - 90)
+        //状态栏 + 导航栏
+        let y = Int(UIApplication.shared.statusBarFrame.size.height + navigationController!.navigationBar.frame.size.height)
+        popoverAnimator.presentedFrame = CGRect(x: x, y: y, width: 180, height: 250)
         // 弹出控制器
         present(popoverVc, animated: true, completion: nil)
     }
 }
 
+// MARK:- 请求数据
+extension HomeViewController {
+    private func loadStatuses() {
+        NetworkTools.shareInstance.loadStatuses { (result, error) in
+            // 1.错误校验
+            if error != nil {
+                print(error!)
+                return
+            }
+            // 2.获取可选类型中的数据
+            guard let resultArray = result else {
+                return
+            }
+            // 3.遍历微博对应的字典
+            for statusDict in resultArray {
+                let status = Status(dict: statusDict)
+                let viewModel = StatusViewModel(status: status)
+                self.viewModels.append(viewModel) //将序列的元素添加到数组的末尾
+                
+            }
+            // 4.刷新表格
+            self.tableView.reloadData()
+            
+        }
+    }
+}
+
+// MARK:- tableView的数据源方法
+extension HomeViewController { //swift 不需要遵守协议 UITableViewDelegate, UITableViewDataSource
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 1.创建cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeViewCell
+        
+        // 2.给cell设置数据
+        cell.viewModel = viewModels[indexPath.row]
+        
+        return cell
+    }
+}

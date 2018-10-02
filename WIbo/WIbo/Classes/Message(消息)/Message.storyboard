@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--消息-->
         <scene sceneID="1m9-XM-Uds">
             <objects>
                 <tableViewController id="yjE-eH-DBi" customClass="MessageViewController" customModule="WIbo" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="yjE-eH-DBi" id="Ybw-aK-1qG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="zDG-8G-toj"/>
+                    <navigationItem key="navigationItem" title="消息" id="zDG-8G-toj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwd-F8-ROV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -55,7 +55,7 @@ class NetworkTools: AFHTTPSessionManager {
 
 // MARK:- 封装请求方法
 extension NetworkTools{
-    func   request(methodType : RequestType ,urlSring : String, parameters: [String: Any],finished : @escaping (Any?, Error?) -> ()){
+    func request(methodType : RequestType ,urlSring : String, parameters: [String: Any],finished : @escaping (_ result : Any?, _ error : Error?) -> ()){
         
         //请求成功，则错误为零。
         let successBlock = { (task : URLSessionDataTask, result :Any?) in
@@ -77,7 +77,7 @@ extension NetworkTools{
 
 // MARK:- 请求AccessToken
 extension NetworkTools {
-    func  loadAccessToken(code : String, finished : @escaping ([String: Any]?, Error?) -> ()) {
+    func loadAccessToken(code : String, finished : @escaping (_ result : [String: Any]?,_ error : Error?) -> ()) {
         // 1.获取请求的URLString
         let urlString = "https://api.weibo.com/oauth2/access_token"
         
@@ -86,14 +86,14 @@ extension NetworkTools {
         
         // 3.发送网络请求
         request(methodType: .POST, urlSring: urlString, parameters: parameters) { (result , error) in
-            finished(result as? [String : AnyObject] , error)
+            finished(result as? [String : Any] , error)
         }
     }
 }
 
 // MARK:- 请求用户的信息
 extension NetworkTools {
-    func loadUserInfo(access_token : String, uid : String, finished : @escaping ([String: Any]?, Error?) -> ()) {
+    func loadUserInfo(access_token : String, uid : String, finished : @escaping (_ result : [String: Any]?, _ error : Error?) -> ()) {
         // 1.获取请求的URLString
         let urlString = "https://api.weibo.com/2/users/show.json"
         
@@ -101,7 +101,30 @@ extension NetworkTools {
         let parameters = ["access_token" : access_token, "uid" : uid]
         // 3.发送网络请求
         request(methodType: .GET, urlSring: urlString, parameters: parameters) { (result, error) in
-            finished(result as? [String : AnyObject] , error)
+            finished(result as? [String : Any] , error)
         }
     }
 }
+
+// MARK:- 请求首页数据
+extension NetworkTools {
+    func loadStatuses(finished : @escaping (_ result : [[String: Any]]?, _ error : Error?) -> ()) {
+        // 1.获取请求的URLString
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json?"
+        // 2.获取请求的参数
+        let parameters = ["access_token" : (UserAccountViewModel.shareIntance.account?.access_token)!]
+         // 3.发送网络请求
+        request(methodType: .GET, urlSring: urlString, parameters: parameters) { (result, error) in
+            // 1.获取字典的数据
+            guard let resultDict = result as? [String : Any] else {
+                finished(nil, error)
+                return
+            }
+            // 2.将数组数据回调给外界控制器
+            finished(resultDict["statuses"]as? [[String : Any]], error)
+          
+        }
+    }
+}
+
+//MARK:- 

@@ -41,12 +41,12 @@ extension OAuthViewController{
         // 1.获取登录页面的URLString
         let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(app_key)&redirect_uri=\(redirect_uri)"
         
-        // 2.创建对应NSURL
+        // 2.创建对应URL
         guard let url = URL(string: urlString) else {
             return
         }
         
-        // 3.创建NSURLRequest对象
+        // 3.创建URLRequest对象
         let request = URLRequest(url: url)
         // 4.加载request对象
         webView.loadRequest(request)
@@ -82,7 +82,7 @@ extension OAuthViewController : UIWebViewDelegate {
         SVProgressHUD.dismiss()
     }
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-        // 1.获取加载网页的NSURL
+        // 1.获取加载网页的URL
         guard let url = request.url else {
             return true
         }

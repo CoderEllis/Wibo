@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--发现-->
         <scene sceneID="CNO-07-wsP">
             <objects>
                 <tableViewController id="rUF-6J-M2h" customClass="DiscoverViewController" customModule="WIbo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wI9-BS-dfC">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" id="wI9-BS-dfC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -22,11 +22,11 @@
                             <outlet property="delegate" destination="rUF-6J-M2h" id="3aH-mU-O4r"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oaQ-ME-mXq"/>
+                    <navigationItem key="navigationItem" title="发现" id="oaQ-ME-mXq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCL-b1-WaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="0.0"/>
+            <point key="canvasLocation" x="133.59999999999999" y="-0.44977511244377816"/>
         </scene>
         <!--发现-->
         <scene sceneID="T3G-ZQ-fiX">
