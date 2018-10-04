@@ -9,6 +9,7 @@
 //swift 在忽略文件里把 pod 打开
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: BaseViewController {
     
@@ -40,7 +41,8 @@ class HomeViewController: BaseViewController {
         //3.请求数据
         loadStatuses()
         
-        tableView.rowHeight = UITableView.automaticDimension
+        // 4.设置估算a高度
+//        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
     }
 
@@ -112,18 +114,40 @@ extension HomeViewController {
                 self.viewModels.append(viewModel) //将序列的元素添加到数组的末尾
                 
             }
-            // 4.刷新表格
+            // 4.缓存图片
+            self.cacheImages(viewModels: self.viewModels)
+        }
+    }
+    
+    ///缓存图片
+    private func cacheImages(viewModels : [StatusViewModel]) {
+        // 0.创建group
+        let group = DispatchGroup()
+        // 1.缓存图片
+        for viewmodel in viewModels {
+            for picURL in viewmodel.picURLs{
+                group.enter()
+                SDWebImageManager.shared().loadImage(with: picURL, options: [], progress: nil) { (_, _, _, _, _, _) in  //progress 下载进度
+//                    print("下载了一张图片")
+                    group.leave()
+                }
+            }
+        }
+        // 2.刷新表格
+        group.notify(queue: DispatchQueue.main) {
+//            print("刷新表格")
             self.tableView.reloadData()
-            
         }
     }
 }
 
 // MARK:- tableView的数据源方法
 extension HomeViewController { //swift 不需要遵守协议 UITableViewDelegate, UITableViewDataSource
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 1.创建cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeViewCell
@@ -132,5 +156,12 @@ extension HomeViewController { //swift 不需要遵守协议 UITableViewDelegate
         cell.viewModel = viewModels[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // 1.获取模型对象
+        let viewModel = viewModels[indexPath.row]
+        
+        return viewModel.cellHeight
     }
 }

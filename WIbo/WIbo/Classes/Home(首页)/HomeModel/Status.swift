@@ -14,7 +14,9 @@ class Status: NSObject { //KVC属于 OC 的 使用时 @objc
     @objc var source : String?                     // 微博来源
     @objc var text : String?                      // 微博的正文
     @objc var mid : Int = 0                       // 微博的ID
-    @objc var user : User?
+    @objc var user : User?                        // 微博对应的用户
+    @objc var pic_urls : [[String : String]]?     // 微博的配图
+    var retweeted_status : Status? // 微博对应的转发的微博
      
     
     // MARK:- 自定义构造函数 使用字典作为参数
@@ -28,6 +30,12 @@ class Status: NSObject { //KVC属于 OC 的 使用时 @objc
         if let userDict = dict["user"] as? [String : Any] {
             user = User(dict: userDict)
         }
+        
+        // 2.将转发微博字典转成转发微博模型对象
+        if let retweetedStatusDict = dict["retweeted_status"] as? [String : Any] {
+            retweeted_status = Status(dict: retweetedStatusDict)
+        }
+        
         
     }
 

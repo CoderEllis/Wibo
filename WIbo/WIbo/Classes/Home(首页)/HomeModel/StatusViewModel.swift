@@ -12,12 +12,15 @@ class StatusViewModel: NSObject {
     // MARK:- 定义属性
     var status : Status?
     
+    var cellHeight : CGFloat = 0
+    
     // MARK:- 对数据处理的属性
     @objc var sourceText : String?        // 处理来源
     @objc var createAtText : String?      // 处理创建时间
     @objc var verifiedImage : UIImage?    // 处理用户认证图标
     @objc var vipImage : UIImage?         // 处理用用户会员等级
     @objc var profileURL : URL?           // 处理用户头像的地址
+    @objc var picURLs : [URL] = [URL]()
 
     // MARK:- 自定义构造函数
     init(status : Status) {
@@ -63,7 +66,20 @@ class StatusViewModel: NSObject {
         //5 处理头像
         let profileURLString = status.user?.profile_image_url ?? ""
         profileURL = URL(string: profileURLString)
+        
+        // 6.处理配图数据  和转发的配图
+        let picURLDicts = status.pic_urls!.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
+        if let picURLDicts = picURLDicts {
+            for picURLDict in picURLDicts {
+                guard let picURLString = picURLDict["thumbnail_pic"] else {
+                    continue //没有就继续
+                }
+                picURLs.append(URL(string: picURLString)!)
+            }
+        }
 
     }
     
 }
+
+
