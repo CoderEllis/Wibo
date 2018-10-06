@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		160CA48B215A319A00352266 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160CA48A215A319A00352266 /* PopoverAnimator.swift */; };
+		1635D02F2167233D009676DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1635D02E2167233D009676DD /* Assets.xcassets */; };
+		1635D03121674746009676DD /* PicPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635D03021674746009676DD /* PicPickerCollectionView.swift */; };
+		1635D05521676C76009676DD /* PicPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635D05321676C76009676DD /* PicPickerViewCell.swift */; };
+		1635D05621676C76009676DD /* PicPickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1635D05421676C76009676DD /* PicPickerViewCell.xib */; };
 		163E23AD2157E391005CFB82 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AB2157E391005CFB82 /* PopoverViewController.swift */; };
 		163E23AE2157E391005CFB82 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E23AC2157E391005CFB82 /* PopoverViewController.xib */; };
 		163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E23AF2157E80C005CFB82 /* TitleButton.swift */; };
@@ -19,7 +23,6 @@
 		165501B8215E6C440059F434 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165501B6215E6C440059F434 /* WelcomeViewController.xib */; };
 		165754B221549918006D9BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754B121549918006D9BE5 /* AppDelegate.swift */; };
 		165754B721549918006D9BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165754B521549918006D9BE5 /* Main.storyboard */; };
-		165754B92154991A006D9BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165754B82154991A006D9BE5 /* Assets.xcassets */; };
 		165754BC2154991A006D9BE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165754BA2154991A006D9BE5 /* LaunchScreen.storyboard */; };
 		165754CA21549C03006D9BE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754C921549C03006D9BE5 /* HomeViewController.swift */; };
 		165754CC21549C2B006D9BE5 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165754CB21549C2B006D9BE5 /* MessageViewController.swift */; };
@@ -55,6 +58,10 @@
 
 /* Begin PBXFileReference section */
 		160CA48A215A319A00352266 /* PopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
+		1635D02E2167233D009676DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1635D03021674746009676DD /* PicPickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPickerCollectionView.swift; sourceTree = "<group>"; };
+		1635D05321676C76009676DD /* PicPickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPickerViewCell.swift; sourceTree = "<group>"; };
+		1635D05421676C76009676DD /* PicPickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicPickerViewCell.xib; sourceTree = "<group>"; };
 		163E23AB2157E391005CFB82 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		163E23AC2157E391005CFB82 /* PopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		163E23AF2157E80C005CFB82 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
@@ -67,7 +74,6 @@
 		165754AE21549918006D9BE5 /* WIbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165754B121549918006D9BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165754B621549918006D9BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		165754B82154991A006D9BE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		165754BB2154991A006D9BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		165754BD2154991A006D9BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		165754C921549C03006D9BE5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1635D032216749FC009676DD /* PicPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1635D03021674746009676DD /* PicPickerCollectionView.swift */,
+				1635D05321676C76009676DD /* PicPickerViewCell.swift */,
+				1635D05421676C76009676DD /* PicPickerViewCell.xib */,
+			);
+			path = PicPicker;
+			sourceTree = "<group>";
+		};
 		163E23AA2157E12C005CFB82 /* UIPopover */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +187,7 @@
 				165754C321549B21006D9BE5 /* Classes */,
 				165754B121549918006D9BE5 /* AppDelegate.swift */,
 				165754B521549918006D9BE5 /* Main.storyboard */,
-				165754B82154991A006D9BE5 /* Assets.xcassets */,
+				1635D02E2167233D009676DD /* Assets.xcassets */,
 				165754BA2154991A006D9BE5 /* LaunchScreen.storyboard */,
 				165754BD2154991A006D9BE5 /* Info.plist */,
 			);
@@ -182,6 +198,10 @@
 			isa = PBXGroup;
 			children = (
 				16D9430A216665BE00186409 /* Compose(发布) */,
+				16D9430C216665F100186409 /* ComposeViewController.xib */,
+				16D9430B216665F100186409 /* ComposeViewController.swift */,
+				16D9430F21666DDF00186409 /* ComposeTitleView.swift */,
+				16D9431121667A3F00186409 /* ComposeTextView.swift */,
 				165754C821549B21006D9BE5 /* Main(主要) */,
 				165754C421549B21006D9BE5 /* Home(首页) */,
 				165754C521549B21006D9BE5 /* Message(消息) */,
@@ -287,10 +307,7 @@
 		16D9430A216665BE00186409 /* Compose(发布) */ = {
 			isa = PBXGroup;
 			children = (
-				16D9430C216665F100186409 /* ComposeViewController.xib */,
-				16D9430B216665F100186409 /* ComposeViewController.swift */,
-				16D9430F21666DDF00186409 /* ComposeTitleView.swift */,
-				16D9431121667A3F00186409 /* ComposeTextView.swift */,
+				1635D032216749FC009676DD /* PicPicker */,
 			);
 			path = "Compose(发布)";
 			sourceTree = "<group>";
@@ -385,9 +402,10 @@
 			files = (
 				165754BC2154991A006D9BE5 /* LaunchScreen.storyboard in Resources */,
 				168FAAD22157773200E364B6 /* VisitorView.xib in Resources */,
-				165754B92154991A006D9BE5 /* Assets.xcassets in Resources */,
 				165501B8215E6C440059F434 /* WelcomeViewController.xib in Resources */,
 				168FAAC02156214C00E364B6 /* MainVCSettings.json in Resources */,
+				1635D05621676C76009676DD /* PicPickerViewCell.xib in Resources */,
+				1635D02F2167233D009676DD /* Assets.xcassets in Resources */,
 				16EC7E79215B8614003DFA0C /* OAuthViewController.xib in Resources */,
 				168FAAB321561BEB00E364B6 /* Profile.storyboard in Resources */,
 				168FAAC5215621F700E364B6 /* Null.storyboard in Resources */,
@@ -457,6 +475,7 @@
 				16EC7E7B215B9847003DFA0C /* Common.swift in Sources */,
 				163E4B572161563000A86F40 /* NSDate-Extension.swift in Sources */,
 				16EC7E7D215BBA83003DFA0C /* NetworkTools.swift in Sources */,
+				1635D03121674746009676DD /* PicPickerCollectionView.swift in Sources */,
 				163E4B522160C40000A86F40 /* Status.swift in Sources */,
 				16D9431021666DDF00186409 /* ComposeTitleView.swift in Sources */,
 				16626DB6215C5CC000D62E12 /* UserAccount.swift in Sources */,
@@ -480,6 +499,7 @@
 				165754CA21549C03006D9BE5 /* HomeViewController.swift in Sources */,
 				163E23B02157E80C005CFB82 /* TitleButton.swift in Sources */,
 				164E7B2F2157F77700200236 /* ELPresentationController.swift in Sources */,
+				1635D05521676C76009676DD /* PicPickerViewCell.swift in Sources */,
 				165754D021549C5B006D9BE5 /* DiscoverViewController.swift in Sources */,
 				165501B7215E6C440059F434 /* WelcomeViewController.swift in Sources */,
 				163E4B7B2162060900A86F40 /* User.swift in Sources */,
@@ -626,6 +646,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -648,6 +669,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -680,6 +702,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",

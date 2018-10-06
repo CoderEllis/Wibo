@@ -12,3 +12,7 @@ import Foundation
 let app_key = "2230450316"
 let app_secret = "5c901ea61007954c6719e24b3fd89fcb"
 let redirect_uri = "https://github.com/CoderEllis"
+
+// MARK:- 选择照片的通知常量
+let PicPickerAddPhotoNote = "PicPickerAddPhotoNote"
+let PicPickerRemovePhotoNote = "PicPickerRemovePhotoNote"

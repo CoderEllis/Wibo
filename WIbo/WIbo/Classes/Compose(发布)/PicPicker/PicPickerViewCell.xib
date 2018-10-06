@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Gp5-OB-U8s" customClass="PicPickerViewCell" customModule="WIbo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="101" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="101" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L97-cg-slc">
+                        <rect key="frame" x="0.0" y="0.0" width="101" height="97"/>
+                        <state key="normal" backgroundImage="compose_pic_add"/>
+                        <state key="highlighted" backgroundImage="compose_pic_add_highlighted"/>
+                        <connections>
+                            <action selector="addPhotoChick" destination="Gp5-OB-U8s" eventType="touchUpInside" id="jz1-eg-uVx"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-D6-s37">
+                        <rect key="frame" x="0.0" y="0.0" width="101" height="97"/>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNQ-Ju-M9D" userLabel="delete">
+                        <rect key="frame" x="77" y="0.0" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="WR9-uc-J6k"/>
+                            <constraint firstAttribute="width" constant="24" id="ZEm-gG-GrQ"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="compose_photo_close"/>
+                        <connections>
+                            <action selector="removePhotoCkick" destination="Gp5-OB-U8s" eventType="touchUpInside" id="O0s-iV-jVw"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gdB-D6-s37" secondAttribute="bottom" id="1Mc-Of-Lwd"/>
+                <constraint firstAttribute="trailing" secondItem="L97-cg-slc" secondAttribute="trailing" id="Dtw-QC-RH3"/>
+                <constraint firstItem="gdB-D6-s37" firstAttribute="leading" secondItem="Gp5-OB-U8s" secondAttribute="leading" id="OwR-Pz-FXB"/>
+                <constraint firstItem="gdB-D6-s37" firstAttribute="top" secondItem="Gp5-OB-U8s" secondAttribute="top" id="TDw-0v-32U"/>
+                <constraint firstItem="L97-cg-slc" firstAttribute="top" secondItem="Gp5-OB-U8s" secondAttribute="top" id="UQ5-x7-KZs"/>
+                <constraint firstAttribute="trailing" secondItem="GNQ-Ju-M9D" secondAttribute="trailing" id="eLG-8a-pSl"/>
+                <constraint firstItem="L97-cg-slc" firstAttribute="leading" secondItem="Gp5-OB-U8s" secondAttribute="leading" id="sOY-mA-zZq"/>
+                <constraint firstAttribute="trailing" secondItem="gdB-D6-s37" secondAttribute="trailing" id="tbw-3V-Tg8"/>
+                <constraint firstItem="GNQ-Ju-M9D" firstAttribute="top" secondItem="Gp5-OB-U8s" secondAttribute="top" id="xvO-Gr-KBw"/>
+                <constraint firstAttribute="bottom" secondItem="L97-cg-slc" secondAttribute="bottom" id="y1Q-2S-E8r"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jy2-1w-oT8"/>
+            <size key="customSize" width="101" height="97"/>
+            <connections>
+                <outlet property="addPhotoBth" destination="L97-cg-slc" id="aVs-sh-kg3"/>
+                <outlet property="imageView" destination="gdB-D6-s37" id="mYg-7M-Ub2"/>
+                <outlet property="removePhotoBth" destination="GNQ-Ju-M9D" id="kX4-se-7mS"/>
+            </connections>
+            <point key="canvasLocation" x="216.80000000000001" y="-43.628185907046479"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="compose_photo_close" width="24" height="24"/>
+        <image name="compose_pic_add" width="70" height="70"/>
+        <image name="compose_pic_add_highlighted" width="70" height="70"/>
+    </resources>
+</document>
