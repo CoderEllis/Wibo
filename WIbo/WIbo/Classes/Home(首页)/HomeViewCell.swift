@@ -57,6 +57,8 @@ class HomeViewCell: UITableViewCell {
             // 6.设置时间的Label
             timeLabel.text = viewModel.createAtText
             
+            contentLabel.attributedText = FindEmoticon.shareIntance.findAttrString(statusText: viewModel.status?.text, font: contentLabel.font)
+            
             // 7.设置来源
             if let sourceText = viewModel.sourceText {
                 sourceLabel.text = "来自 " + sourceText
@@ -81,7 +83,9 @@ class HomeViewCell: UITableViewCell {
             // 11.设置转发微博的正文
             if viewModel.status?.retweeted_status != nil {
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, let retweetedText = viewModel.status?.retweeted_status?.text {
-                    retweetedContentLabel.text = "@" + "\(screenName) :" + retweetedText
+                    let retweetedText = "@" + "\(screenName) :" + retweetedText
+                    retweetedContentLabel.attributedText = FindEmoticon.shareIntance.findAttrString(statusText: retweetedText, font: retweetedContentLabel.font)
+                    
                     
                     // 设置转发正文距离顶部的约束
                     retweetedContentLabelTopCons.constant = 15

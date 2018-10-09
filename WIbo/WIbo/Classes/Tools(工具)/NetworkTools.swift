@@ -55,7 +55,7 @@ class NetworkTools: AFHTTPSessionManager {
 
 // MARK:- 封装请求方法
 extension NetworkTools{
-    func request(methodType : RequestType ,urlSring : String, parameters: [String: Any],finished : @escaping (_ result : Any?, _ error : Error?) -> ()){
+    func  request(methodType : RequestType ,urlSring : String, parameters: [String: Any],finished : @escaping (_ result : Any?, _ error : Error?) -> ()){
         
         //请求成功，则错误为零。
         let successBlock = { (task : URLSessionDataTask, result :Any?) in
@@ -128,4 +128,49 @@ extension NetworkTools {
     }
 }
 
-//MARK:- 
+// MARK:- 发送微博
+extension NetworkTools {
+    func sendStatus(statusText : String, isSuccess : @escaping (_ isSuccess : Bool) -> ()) {
+        // 1.获取请求的URLString
+        let urlString = "https://api.weibo.com/2/statuses/update.json"
+        // 2.获取请求的参数
+        let access_token = (UserAccountViewModel.shareIntance.account?.access_token)!
+        let parameters = ["access_token" : access_token, "status" : statusText]
+         // 3.发送网络请求
+        request(methodType: .POST, urlSring: urlString, parameters: parameters) { (result, error) in
+            if result != nil {
+                isSuccess(true)
+            }else {
+                isSuccess(false)
+            }
+        }
+    }
+}
+
+// MARK:- 发送微博并且携带照片
+extension NetworkTools {
+    func sendStatus(statusText : String, image : UIImage, isSuccess : @escaping (_ isSuccess : Bool) -> ()){
+         // 1.获取请求的URLString
+        let urlString = "https://api.weibo.com/2/statuses/upload.json"
+        
+        // 2.获取请求的参数
+        let access_token = (UserAccountViewModel.shareIntance.account?.access_token)!
+        let parameters = ["access_token" : access_token, "status" : statusText]
+        // 3.发送网络请求
+        post(urlString, parameters: parameters, constructingBodyWith: { (formData) in
+
+            //返回压缩图片
+            if let imageData = image.jpegData(compressionQuality: 0.5) {
+                formData.appendPart(withFileData: imageData, name: "pic", fileName: "123.png", mimeType: "image/png")
+            }
+            //progress 进度
+        }, progress: nil, success: { (_, _) in
+            isSuccess(true)
+        }) { (_, error) in
+//            print("接口错误\(error)")
+            isSuccess(false)
+        }
+         
+    }
+}
+

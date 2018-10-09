@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ComposeViewController: UIViewController {
     // MARK:- 控件属性
@@ -16,7 +17,10 @@ class ComposeViewController: UIViewController {
     // MARK:- 懒加载属性
     fileprivate lazy var titleView : ComposeTitleView = ComposeTitleView()
     fileprivate lazy var images : [UIImage] = [UIImage]()
-    
+    fileprivate lazy var emoticonVc : EmoticonController = EmoticonController {[weak self] (emoticon) in
+        self?.textView.insertEmoticon(emoticon)
+        self?.textViewDidChange(self!.textView)
+    }
     
     // MARK:- 约束的属性
     /// 工具条底部约束
@@ -76,8 +80,30 @@ extension ComposeViewController {
     }
     
     @objc fileprivate func sendItemClick() {
-        print("sendItemClick")
+        // 0.键盘退出
+        textView.resignFirstResponder()
+        
+        // 1.获取发送微博的微博正文
+        let statusText = textView.getEmoticonString()
+//        print(statusText)
+        // 2.定义回调的闭包
+        let finishedCallback = { (isSuccess : Bool) -> () in
+            if !isSuccess {
+                SVProgressHUD.showError(withStatus: "发送微博失败")
+                return
+            }else {
+                SVProgressHUD.showSuccess(withStatus: "发送微博成功")
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        // 3.获取用户选中的图片
+        if let image = images.first {
+            NetworkTools.shareInstance.sendStatus(statusText: statusText, image: image, isSuccess: finishedCallback)
+        }else {
+            NetworkTools.shareInstance.sendStatus(statusText: statusText, isSuccess: finishedCallback)
+        }
     }
+    
     
     @objc fileprivate func keyboardWillChangeFrame(_ note : Notification) {
         // 1.获取动画执行的时间
@@ -106,8 +132,17 @@ extension ComposeViewController {
         UIView.animate(withDuration: 0.25) {
             self.view.layoutIfNeeded()
         }
-        
     }
+    
+    @IBAction func emoticonBtnClick() {
+        // 1.退出键盘
+        textView.resignFirstResponder()
+        // 2.切换键盘
+        textView.inputView = textView.inputView != nil ? nil : emoticonVc.view
+        // 3.弹出键盘
+        textView.becomeFirstResponder()
+    }
+    
 }
 
 // MARK:- 添加照片和删除照片的事件
