@@ -32,11 +32,11 @@ class PicPickerViewCell: UICollectionViewCell {
      
     // MARK:- 事件监听
     @IBAction func addPhotoChick() {// 多重传递 用通知 Notification
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: PicPickerAddPhotoNote), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(PicPickerAddPhotoNote), object: nil)
     }
     
     @IBAction func removePhotoCkick() {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: PicPickerRemovePhotoNote), object: imageView.image)
+        NotificationCenter.default.post(name: NSNotification.Name(PicPickerRemovePhotoNote), object: imageView.image)
         
     }
     

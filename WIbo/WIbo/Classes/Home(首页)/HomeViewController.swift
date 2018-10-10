@@ -49,9 +49,11 @@ class HomeViewController: BaseViewController {
         setupHeaderView()
         setupFooterView()
         
-        //提示 label
+        //5.提示 label
         setupTipLabel()
         
+         // 6.监听通知
+        setupNatifications()
 
     }
 
@@ -107,10 +109,14 @@ extension HomeViewController{
         tipLabel.font = UIFont.systemFont(ofSize: 14)
         tipLabel.textAlignment = .center
         tipLabel.isHidden = true
-        
     }
     
+    fileprivate func setupNatifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(showPhotoBrowser), name: NSNotification.Name(rawValue: ShowPhotoBrowserNote), object: nil)
+    }
 }
+
+
 // MARK:- 事件监听的函数
 extension HomeViewController{
     @objc fileprivate func titleBtnClick(titleBth : TitleButton){
@@ -134,6 +140,17 @@ extension HomeViewController{
         present(popoverVc, animated: true, completion: nil)
     }
     
+    @objc fileprivate func showPhotoBrowser(note : Notification) {
+        // 0.取出数据
+        let indexPath = note.userInfo?[ShowPhotoBrowserIndexKey] as! IndexPath
+        let picURLs = note.userInfo?[ShowPhotoBrowserUrlsKey] as! [URL]
+        
+        // 1.创建控制器
+        let photoBrowserVc = PhotoBrowserController(indexPath: indexPath, picURLs: picURLs)
+        
+        // 2.以modal的形式弹出控制器
+        present(photoBrowserVc, animated: true, completion: nil)
+    }
 
     
     
